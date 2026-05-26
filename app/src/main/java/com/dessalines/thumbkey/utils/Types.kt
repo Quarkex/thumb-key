@@ -15,6 +15,7 @@ data class KeyboardDefinitionModes(
     val numeric: KeyboardC,
     val ctrled: KeyboardC? = null,
     val alted: KeyboardC? = null,
+    val supered: KeyboardC? = null,
 ) {
     companion object
 }
@@ -201,6 +202,10 @@ sealed class KeyAction {
         val enable: Boolean,
     ) : KeyAction()
 
+    class ToggleSuperMode(
+        val enable: Boolean,
+    ) : KeyAction()
+
     class ShiftAndCapsLock(
         val enable: Boolean,
     ) : KeyAction()
@@ -318,6 +323,7 @@ enum class KeyboardMode {
     EMOJI,
     CTRLED,
     ALTED,
+    SUPERED,
     CLIPBOARD,
 }
 

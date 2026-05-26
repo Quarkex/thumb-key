@@ -420,6 +420,95 @@ val KB_EN_THUMBKEY_PROGRAMMING_ALTED =
         ),
     )
 
+val KB_EN_THUMBKEY_PROGRAMMING_SUPERED =
+    KeyboardC(
+        listOf(
+            listOf(
+                KeyItemC(
+                    center = keyCModifier(KeyEvent.META_META_ON, KeyEvent.KEYCODE_S, "s", size = LARGE),
+                    bottomRight = keyCModifier(KeyEvent.META_META_ON, KeyEvent.KEYCODE_W, "w"),
+                    bottomLeft = keyCModifier(KeyEvent.META_META_ON, KeyEvent.KEYCODE_9, "(", color = MUTED),
+                    topLeft = keyCModifier(KeyEvent.META_META_ON, KeyEvent.KEYCODE_GRAVE, "`", color = MUTED),
+                    top = keyCModifier(KeyEvent.META_META_ON, KeyEvent.KEYCODE_BACKSLASH, "\\", color = MUTED),
+                    topRight = keyCModifier(KeyEvent.META_META_ON, KeyEvent.KEYCODE_SLASH, "/", color = MUTED),
+                ),
+                KeyItemC(
+                    center = keyCModifier(KeyEvent.META_META_ON, KeyEvent.KEYCODE_R, "r", size = LARGE),
+                    bottom = keyCModifier(KeyEvent.META_META_ON, KeyEvent.KEYCODE_G, "g"),
+                    top = keyCModifier(KeyEvent.META_META_ON, KeyEvent.KEYCODE_6, "^", color = MUTED),
+                    topLeft = keyCModifier(KeyEvent.META_META_ON, KeyEvent.KEYCODE_APOSTROPHE, "\"", color = MUTED),
+                    left = keyCModifier(KeyEvent.META_META_ON, KeyEvent.KEYCODE_COMMA, "<", color = MUTED),
+                    right = keyCModifier(KeyEvent.META_META_ON, KeyEvent.KEYCODE_PERIOD, ">", color = MUTED),
+                ),
+                KeyItemC(
+                    center = keyCModifier(KeyEvent.META_META_ON, KeyEvent.KEYCODE_O, "o", size = LARGE),
+                    bottomLeft = keyCModifier(KeyEvent.META_META_ON, KeyEvent.KEYCODE_U, "u"),
+                    bottomRight = keyCModifier(KeyEvent.META_META_ON, KeyEvent.KEYCODE_0, ")", color = MUTED),
+                    topLeft = keyCModifier(KeyEvent.META_META_ON, KeyEvent.KEYCODE_EQUALS, "=", color = MUTED),
+                    topRight = keyCModifier(KeyEvent.META_META_ON, KeyEvent.KEYCODE_PLUS, "+", color = MUTED),
+                ),
+            ),
+            listOf(
+                KeyItemC(
+                    center = keyCModifier(KeyEvent.META_META_ON, KeyEvent.KEYCODE_N, "n", size = LARGE),
+                    right = keyCModifier(KeyEvent.META_META_ON, KeyEvent.KEYCODE_M, "m"),
+                    left = keyCModifier(KeyEvent.META_META_ON, KeyEvent.KEYCODE_AT, "@", color = MUTED),
+                    top = keyCModifier(KeyEvent.META_META_ON, KeyEvent.KEYCODE_4, "$", color = MUTED),
+                    bottom = keyCModifier(KeyEvent.META_META_ON, KeyEvent.KEYCODE_7, "&", color = MUTED),
+                    bottomLeft = keyCModifier(KeyEvent.META_META_ON, KeyEvent.KEYCODE_BACKSLASH, "|", color = MUTED),
+                ),
+                KeyItemC(
+                    center = keyCModifier(KeyEvent.META_META_ON, KeyEvent.KEYCODE_H, "h", size = LARGE),
+                    topLeft = keyCModifier(KeyEvent.META_META_ON, KeyEvent.KEYCODE_J, "j"),
+                    top = keyCModifier(KeyEvent.META_META_ON, KeyEvent.KEYCODE_Q, "q"),
+                    topRight = keyCModifier(KeyEvent.META_META_ON, KeyEvent.KEYCODE_B, "b"),
+                    right = keyCModifier(KeyEvent.META_META_ON, KeyEvent.KEYCODE_P, "p"),
+                    bottomRight = keyCModifier(KeyEvent.META_META_ON, KeyEvent.KEYCODE_Y, "y"),
+                    bottom = keyCModifier(KeyEvent.META_META_ON, KeyEvent.KEYCODE_X, "x"),
+                    bottomLeft = keyCModifier(KeyEvent.META_META_ON, KeyEvent.KEYCODE_V, "v"),
+                    left = keyCModifier(KeyEvent.META_META_ON, KeyEvent.KEYCODE_K, "k"),
+                ),
+                KeyItemC(
+                    center = keyCModifier(KeyEvent.META_META_ON, KeyEvent.KEYCODE_A, "a", size = LARGE),
+                    left = keyCModifier(KeyEvent.META_META_ON, KeyEvent.KEYCODE_L, "l"),
+                ),
+            ),
+            listOf(
+                KeyItemC(
+                    center = keyCModifier(KeyEvent.META_META_ON, KeyEvent.KEYCODE_T, "t", size = LARGE),
+                    topRight = keyCModifier(KeyEvent.META_META_ON, KeyEvent.KEYCODE_C, "c"),
+                    bottom = keyCModifier(KeyEvent.META_META_ON, KeyEvent.KEYCODE_COMMA, ",", color = MUTED),
+                    topLeft = keyCModifier(KeyEvent.META_META_ON, KeyEvent.KEYCODE_LEFT_BRACKET, "{", color = MUTED),
+                    bottomLeft = keyCModifier(KeyEvent.META_META_ON, KeyEvent.KEYCODE_LEFT_BRACKET, "[", color = MUTED),
+                    bottomRight = keyCModifier(KeyEvent.META_META_ON, KeyEvent.KEYCODE_1, "!", color = MUTED),
+                ),
+                KeyItemC(
+                    center = keyCModifier(KeyEvent.META_META_ON, KeyEvent.KEYCODE_I, "i", size = LARGE),
+                    top = keyCModifier(KeyEvent.META_META_ON, KeyEvent.KEYCODE_F, "f"),
+                    topRight = keyCModifier(KeyEvent.META_META_ON, KeyEvent.KEYCODE_APOSTROPHE, "'", color = MUTED),
+                    right = keyCModifier(KeyEvent.META_META_ON, KeyEvent.KEYCODE_Z, "z"),
+                    bottomRight = keyCModifier(KeyEvent.META_META_ON, KeyEvent.KEYCODE_MINUS, "-", color = MUTED),
+                    bottom = keyCModifier(KeyEvent.META_META_ON, KeyEvent.KEYCODE_PERIOD, ".", color = MUTED),
+                    bottomLeft = keyCModifier(KeyEvent.META_META_ON, KeyEvent.KEYCODE_8, "*", color = MUTED),
+                    left = keyCModifier(KeyEvent.META_META_ON, KeyEvent.KEYCODE_SLASH, "?", color = MUTED),
+                ),
+                KeyItemC(
+                    center = keyCModifier(KeyEvent.META_META_ON, KeyEvent.KEYCODE_E, "e", size = LARGE),
+                    topLeft = keyCModifier(KeyEvent.META_META_ON, KeyEvent.KEYCODE_D, "d"),
+                    bottomLeft = keyCModifier(KeyEvent.META_META_ON, KeyEvent.KEYCODE_SEMICOLON, ";", color = MUTED),
+                    bottom = keyCModifier(KeyEvent.META_META_ON, KeyEvent.KEYCODE_SEMICOLON, ":", color = MUTED),
+                    topRight = keyCModifier(KeyEvent.META_META_ON, KeyEvent.KEYCODE_RIGHT_BRACKET, "}", color = MUTED),
+                    bottomRight = keyCModifier(KeyEvent.META_META_ON, KeyEvent.KEYCODE_RIGHT_BRACKET, "]", color = MUTED),
+                ),
+                BACKSPACE_KEY_ITEM,
+            ),
+            listOf(
+                SPACEBAR_PROGRAMMING_KEY_ITEM,
+                RETURN_KEY_ITEM,
+            ),
+        ),
+    )
+
 val KB_EN_THUMBKEY_PROGRAMMING: KeyboardDefinition =
     KeyboardDefinition(
         title = "english thumb-key programming",
@@ -430,6 +519,7 @@ val KB_EN_THUMBKEY_PROGRAMMING: KeyboardDefinition =
                 numeric = NUMERIC_KEYBOARD,
                 ctrled = KB_EN_THUMBKEY_PROGRAMMING_CTRLED,
                 alted = KB_EN_THUMBKEY_PROGRAMMING_ALTED,
+                supered = KB_EN_THUMBKEY_PROGRAMMING_SUPERED,
             ),
         settings =
             KeyboardDefinitionSettings(

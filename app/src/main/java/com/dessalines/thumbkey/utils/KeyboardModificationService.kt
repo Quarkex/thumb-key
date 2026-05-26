@@ -33,6 +33,8 @@ import com.dessalines.thumbkey.keyboards.SWITCH_IME_VOICE_KEYC
 import com.dessalines.thumbkey.keyboards.SWITCH_LANGUAGE_KEYC
 import com.dessalines.thumbkey.keyboards.TOGGLE_ALT_FALSE_KEYC
 import com.dessalines.thumbkey.keyboards.TOGGLE_ALT_TRUE_KEYC
+import com.dessalines.thumbkey.keyboards.TOGGLE_SUPER_FALSE_KEYC
+import com.dessalines.thumbkey.keyboards.TOGGLE_SUPER_TRUE_KEYC
 import com.dessalines.thumbkey.keyboards.TOGGLE_CAPS_KEYC
 import com.dessalines.thumbkey.keyboards.TOGGLE_CLIPBOARD_MODE_TRUE_KEYC
 import com.dessalines.thumbkey.keyboards.ESCAPE_KEYC
@@ -127,6 +129,7 @@ fun modifyKeyboardDefinition(
             KeyboardDefinitionModes.numeric transform { modifyKeyboardC(it, modifications.numeric) ?: it }
             KeyboardDefinitionModes.ctrled transform { modifyKeyboardC(it, modifications.ctrled) ?: it }
             KeyboardDefinitionModes.alted transform { modifyKeyboardC(it, modifications.alted) ?: it }
+            KeyboardDefinitionModes.supered transform { modifyKeyboardC(it, modifications.supered) ?: it }
         }
     }
 }
@@ -292,6 +295,8 @@ fun getCommonKeyCFromKeyAction(keyActionSerializable: KeyActionSerializable?): K
         KeyActionSerializable.ToggleCtrlModeFalse -> TOGGLE_CTRL_FALSE_KEYC
         KeyActionSerializable.ToggleAltModeTrue -> TOGGLE_ALT_TRUE_KEYC
         KeyActionSerializable.ToggleAltModeFalse -> TOGGLE_ALT_FALSE_KEYC
+        KeyActionSerializable.ToggleSuperModeTrue -> TOGGLE_SUPER_TRUE_KEYC
+        KeyActionSerializable.ToggleSuperModeFalse -> TOGGLE_SUPER_FALSE_KEYC
         KeyActionSerializable.Left -> SPACEBAR_LEFT_KEYC
         KeyActionSerializable.Right -> SPACEBAR_RIGHT_KEYC
         KeyActionSerializable.Top -> SPACEBAR_PROGRAMMING_TOP_KEYC
@@ -315,7 +320,7 @@ fun getCommonKeyCFromKeyAction(keyActionSerializable: KeyActionSerializable?): K
         KeyActionSerializable.SwitchIMEVoice -> SWITCH_IME_VOICE_KEYC
         KeyActionSerializable.HideKeyboard -> HIDE_KEYBOARD_KEYC
         KeyActionSerializable.Escape -> ESCAPE_KEYC
-        KeyActionSerializable.Super -> SUPER_KEYC
+        KeyActionSerializable.Super -> TOGGLE_SUPER_TRUE_KEYC
         KeyActionSerializable.Noop -> NOOP_KEYC
         null -> null
     }
@@ -340,6 +345,7 @@ data class KeyboardDefinitionModesSerializable(
     val numeric: KeyboardCSerializable? = null,
     val ctrled: KeyboardCSerializable? = null,
     val alted: KeyboardCSerializable? = null,
+    val supered: KeyboardCSerializable? = null,
 )
 
 @Serializable
@@ -493,6 +499,8 @@ enum class KeyActionSerializable {
     ToggleCtrlModeFalse,
     ToggleAltModeTrue,
     ToggleAltModeFalse,
+    ToggleSuperModeTrue,
+    ToggleSuperModeFalse,
     Left,
     Right,
     Top,

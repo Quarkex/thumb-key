@@ -340,6 +340,7 @@ fun performKeyAction(
     onToggleShiftMode: (enable: Boolean) -> Unit,
     onToggleCtrlMode: (enable: Boolean) -> Unit,
     onToggleAltMode: (enable: Boolean) -> Unit,
+    onToggleSuperMode: (enable: Boolean) -> Unit,
     onToggleNumericMode: (enable: Boolean) -> Unit,
     onToggleEmojiMode: (enable: Boolean) -> Unit,
     onToggleClipboardMode: (enable: Boolean) -> Unit,
@@ -1238,6 +1239,12 @@ fun performKeyAction(
             val enable = action.enable
             Log.d(TAG, "Toggling Alted: $enable")
             onToggleAltMode(enable)
+        }
+
+        is KeyAction.ToggleSuperMode -> {
+            val enable = action.enable
+            Log.d(TAG, "Toggling Supered: $enable")
+            onToggleSuperMode(enable)
         }
 
         is KeyAction.ToggleNumericMode -> {

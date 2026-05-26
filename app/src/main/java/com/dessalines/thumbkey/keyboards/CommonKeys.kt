@@ -411,16 +411,24 @@ val ESCAPE_KEYC =
 
 val SUPER_KEYC =
     KeyC(
-        action =
-            SendEvent(
-                KeyEvent(
-                    KeyEvent.ACTION_DOWN,
-                    KeyEvent.KEYCODE_META_LEFT,
-                ),
-            ),
+        action = ToggleSuperMode(true),
         display = KeyDisplay.TextDisplay("Super"),
         size = FontSizeVariant.SMALL,
         color = ColorVariant.MUTED,
+    )
+
+val TOGGLE_SUPER_TRUE_KEYC =
+    KeyC(
+        display = KeyDisplay.TextDisplay("Super"),
+        action = ToggleSuperMode(true),
+        color = MUTED,
+    )
+
+val TOGGLE_SUPER_FALSE_KEYC =
+    KeyC(
+        display = KeyDisplay.IconDisplay(Icons.Outlined.KeyboardDoubleArrowDown),
+        action = ToggleSuperMode(false),
+        color = MUTED,
     )
 
 val RETURN_TOP_KEYC =

@@ -175,6 +175,17 @@ fun KeyboardScreen(
                 }
             }
 
+            KeyboardMode.SUPERED -> {
+                keyboardDefinition.modes.supered ?: run {
+                    val text = stringResource(R.string.warning_invalid_mode, mode, keyboardDefinition.title)
+                    Toast.makeText(ctx, text, Toast.LENGTH_SHORT).show()
+                    Log.d(TAG, text)
+
+                    mode = KeyboardMode.MAIN
+                    keyboardDefinition.modes.main
+                }
+            }
+
             else -> {
                 // Emoji and Clipboard modes use their own rendering, which does not depend on this value
                 KB_EN_THUMBKEY_MAIN
@@ -398,6 +409,19 @@ fun KeyboardScreen(
                                         mode = KeyboardMode.MAIN
                                     } else {
                                         mode = if (enable) KeyboardMode.ALTED else KeyboardMode.MAIN
+                                    }
+                                },
+                                onToggleSuperMode = { enable ->
+                                    if (enable && mode == KeyboardMode.SUPERED) {
+                                        ctx.currentInputConnection?.sendKeyEvent(
+                                            android.view.KeyEvent(android.view.KeyEvent.ACTION_DOWN, android.view.KeyEvent.KEYCODE_META_LEFT),
+                                        )
+                                        ctx.currentInputConnection?.sendKeyEvent(
+                                            android.view.KeyEvent(android.view.KeyEvent.ACTION_UP, android.view.KeyEvent.KEYCODE_META_LEFT),
+                                        )
+                                        mode = KeyboardMode.MAIN
+                                    } else {
+                                        mode = if (enable) KeyboardMode.SUPERED else KeyboardMode.MAIN
                                     }
                                 },
                                 onToggleNumericMode = { enable ->
@@ -694,6 +718,19 @@ fun KeyboardScreen(
                                                 mode = KeyboardMode.MAIN
                                             } else {
                                                 mode = if (enable) KeyboardMode.ALTED else KeyboardMode.MAIN
+                                            }
+                                        },
+                                        onToggleSuperMode = { enable ->
+                                            if (enable && mode == KeyboardMode.SUPERED) {
+                                                ctx.currentInputConnection?.sendKeyEvent(
+                                                    android.view.KeyEvent(android.view.KeyEvent.ACTION_DOWN, android.view.KeyEvent.KEYCODE_META_LEFT),
+                                                )
+                                                ctx.currentInputConnection?.sendKeyEvent(
+                                                    android.view.KeyEvent(android.view.KeyEvent.ACTION_UP, android.view.KeyEvent.KEYCODE_META_LEFT),
+                                                )
+                                                mode = KeyboardMode.MAIN
+                                            } else {
+                                                mode = if (enable) KeyboardMode.SUPERED else KeyboardMode.MAIN
                                             }
                                         },
                                         onToggleNumericMode = { enable ->
