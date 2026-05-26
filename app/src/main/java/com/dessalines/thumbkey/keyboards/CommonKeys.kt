@@ -395,6 +395,34 @@ val RETURN_KEY_ITEM =
         longPress = CommitText("\n"),
     )
 
+val ESCAPE_KEYC =
+    KeyC(
+        action =
+            SendEvent(
+                KeyEvent(
+                    KeyEvent.ACTION_DOWN,
+                    KeyEvent.KEYCODE_ESCAPE,
+                ),
+            ),
+        display = KeyDisplay.TextDisplay("Esc"),
+        size = FontSizeVariant.SMALL,
+        color = ColorVariant.MUTED,
+    )
+
+val SUPER_KEYC =
+    KeyC(
+        action =
+            SendEvent(
+                KeyEvent(
+                    KeyEvent.ACTION_DOWN,
+                    KeyEvent.KEYCODE_META_LEFT,
+                ),
+            ),
+        display = KeyDisplay.TextDisplay("Super"),
+        size = FontSizeVariant.SMALL,
+        color = ColorVariant.MUTED,
+    )
+
 val RETURN_TOP_KEYC =
     KeyC(
         action =

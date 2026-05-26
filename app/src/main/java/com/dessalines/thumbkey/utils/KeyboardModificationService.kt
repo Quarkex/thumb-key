@@ -35,6 +35,8 @@ import com.dessalines.thumbkey.keyboards.TOGGLE_ALT_FALSE_KEYC
 import com.dessalines.thumbkey.keyboards.TOGGLE_ALT_TRUE_KEYC
 import com.dessalines.thumbkey.keyboards.TOGGLE_CAPS_KEYC
 import com.dessalines.thumbkey.keyboards.TOGGLE_CLIPBOARD_MODE_TRUE_KEYC
+import com.dessalines.thumbkey.keyboards.ESCAPE_KEYC
+import com.dessalines.thumbkey.keyboards.SUPER_KEYC
 import com.dessalines.thumbkey.keyboards.TOGGLE_CTRL_FALSE_KEYC
 import com.dessalines.thumbkey.keyboards.TOGGLE_CTRL_TRUE_KEYC
 import com.dessalines.thumbkey.keyboards.TOGGLE_EMOJI_MODE_TRUE_KEYC
@@ -312,6 +314,8 @@ fun getCommonKeyCFromKeyAction(keyActionSerializable: KeyActionSerializable?): K
         KeyActionSerializable.SwitchIME -> SWITCH_IME_KEYC
         KeyActionSerializable.SwitchIMEVoice -> SWITCH_IME_VOICE_KEYC
         KeyActionSerializable.HideKeyboard -> HIDE_KEYBOARD_KEYC
+        KeyActionSerializable.Escape -> ESCAPE_KEYC
+        KeyActionSerializable.Super -> SUPER_KEYC
         KeyActionSerializable.Noop -> NOOP_KEYC
         null -> null
     }
@@ -511,5 +515,7 @@ enum class KeyActionSerializable {
     DeleteViaTextManipulation,
     DeleteWordBeforeCursor,
     DeleteWordAfterCursor,
+    Escape,
+    Super,
     Noop,
 }
