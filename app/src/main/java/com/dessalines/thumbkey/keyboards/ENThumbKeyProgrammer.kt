@@ -245,6 +245,8 @@ val KB_EN_THUMBKEY_PROGRAMMING: KeyboardDefinition =
                 main = KB_EN_THUMBKEY_PROGRAMMING_MAIN,
                 shifted = KB_EN_THUMBKEY_PROGRAMMING_SHIFTED,
                 numeric = NUMERIC_KEYBOARD,
+                ctrled = KB_EN_THUMBKEY_PROGRAMMING_MAIN,
+                alted = KB_EN_THUMBKEY_PROGRAMMING_MAIN,
             ),
         settings =
             KeyboardDefinitionSettings(
