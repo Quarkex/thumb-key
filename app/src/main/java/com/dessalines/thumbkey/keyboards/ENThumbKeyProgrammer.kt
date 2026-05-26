@@ -34,7 +34,6 @@ val KB_EN_THUMBKEY_PROGRAMMING_MAIN =
                 ),
                 KeyItemC(
                     center = KeyC("o", size = LARGE),
-                    swipeType = FOUR_WAY_DIAGONAL,
                     bottomLeft = KeyC("u"),
                     bottomRight = KeyC(")", color = MUTED),
                     topLeft = KeyC("=", color = MUTED),
@@ -64,7 +63,6 @@ val KB_EN_THUMBKEY_PROGRAMMING_MAIN =
                 ),
                 KeyItemC(
                     center = KeyC("a", size = LARGE),
-                    swipeType = FOUR_WAY_CROSS,
                     left = KeyC("l"),
                     top =
                         KeyC(
@@ -147,7 +145,6 @@ val KB_EN_THUMBKEY_PROGRAMMING_SHIFTED =
                 ),
                 KeyItemC(
                     center = KeyC("O", size = LARGE),
-                    swipeType = FOUR_WAY_DIAGONAL,
                     bottomLeft = KeyC("U"),
                     bottomRight = KeyC(")", color = MUTED),
                     topLeft = KeyC("=", color = MUTED),
@@ -177,7 +174,6 @@ val KB_EN_THUMBKEY_PROGRAMMING_SHIFTED =
                 ),
                 KeyItemC(
                     center = KeyC("A", size = LARGE),
-                    swipeType = FOUR_WAY_CROSS,
                     left = KeyC("L"),
                     bottom =
                         KeyC(
