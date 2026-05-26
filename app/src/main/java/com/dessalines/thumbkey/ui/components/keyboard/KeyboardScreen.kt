@@ -375,20 +375,30 @@ fun KeyboardScreen(
                                         }
                                 },
                                 onToggleCtrlMode = { enable ->
-                                    mode =
-                                        if (enable) {
-                                            KeyboardMode.CTRLED
-                                        } else {
-                                            KeyboardMode.MAIN
-                                        }
+                                    if (enable && mode == KeyboardMode.CTRLED) {
+                                        ctx.currentInputConnection?.sendKeyEvent(
+                                            android.view.KeyEvent(android.view.KeyEvent.ACTION_DOWN, android.view.KeyEvent.KEYCODE_CTRL_LEFT),
+                                        )
+                                        ctx.currentInputConnection?.sendKeyEvent(
+                                            android.view.KeyEvent(android.view.KeyEvent.ACTION_UP, android.view.KeyEvent.KEYCODE_CTRL_LEFT),
+                                        )
+                                        mode = KeyboardMode.MAIN
+                                    } else {
+                                        mode = if (enable) KeyboardMode.CTRLED else KeyboardMode.MAIN
+                                    }
                                 },
                                 onToggleAltMode = { enable ->
-                                    mode =
-                                        if (enable) {
-                                            KeyboardMode.ALTED
-                                        } else {
-                                            KeyboardMode.MAIN
-                                        }
+                                    if (enable && mode == KeyboardMode.ALTED) {
+                                        ctx.currentInputConnection?.sendKeyEvent(
+                                            android.view.KeyEvent(android.view.KeyEvent.ACTION_DOWN, android.view.KeyEvent.KEYCODE_ALT_LEFT),
+                                        )
+                                        ctx.currentInputConnection?.sendKeyEvent(
+                                            android.view.KeyEvent(android.view.KeyEvent.ACTION_UP, android.view.KeyEvent.KEYCODE_ALT_LEFT),
+                                        )
+                                        mode = KeyboardMode.MAIN
+                                    } else {
+                                        mode = if (enable) KeyboardMode.ALTED else KeyboardMode.MAIN
+                                    }
                                 },
                                 onToggleNumericMode = { enable ->
                                     mode =
@@ -661,20 +671,30 @@ fun KeyboardScreen(
                                                 }
                                         },
                                         onToggleCtrlMode = { enable ->
-                                            mode =
-                                                if (enable) {
-                                                    KeyboardMode.CTRLED
-                                                } else {
-                                                    KeyboardMode.MAIN
-                                                }
+                                            if (enable && mode == KeyboardMode.CTRLED) {
+                                                ctx.currentInputConnection?.sendKeyEvent(
+                                                    android.view.KeyEvent(android.view.KeyEvent.ACTION_DOWN, android.view.KeyEvent.KEYCODE_CTRL_LEFT),
+                                                )
+                                                ctx.currentInputConnection?.sendKeyEvent(
+                                                    android.view.KeyEvent(android.view.KeyEvent.ACTION_UP, android.view.KeyEvent.KEYCODE_CTRL_LEFT),
+                                                )
+                                                mode = KeyboardMode.MAIN
+                                            } else {
+                                                mode = if (enable) KeyboardMode.CTRLED else KeyboardMode.MAIN
+                                            }
                                         },
                                         onToggleAltMode = { enable ->
-                                            mode =
-                                                if (enable) {
-                                                    KeyboardMode.ALTED
-                                                } else {
-                                                    KeyboardMode.MAIN
-                                                }
+                                            if (enable && mode == KeyboardMode.ALTED) {
+                                                ctx.currentInputConnection?.sendKeyEvent(
+                                                    android.view.KeyEvent(android.view.KeyEvent.ACTION_DOWN, android.view.KeyEvent.KEYCODE_ALT_LEFT),
+                                                )
+                                                ctx.currentInputConnection?.sendKeyEvent(
+                                                    android.view.KeyEvent(android.view.KeyEvent.ACTION_UP, android.view.KeyEvent.KEYCODE_ALT_LEFT),
+                                                )
+                                                mode = KeyboardMode.MAIN
+                                            } else {
+                                                mode = if (enable) KeyboardMode.ALTED else KeyboardMode.MAIN
+                                            }
                                         },
                                         onToggleNumericMode = { enable ->
                                             mode =
